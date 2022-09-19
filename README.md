@@ -8,6 +8,8 @@
 -[Seguridad y alta disponibilidad](https://github.com/cristianotermin99/2ASIR/blob/main/Seguridad/READMESEGURIDAD.md)
 
 
+Esto es otro cambio
+Para ver como resolver conflictos de codigo
 
 Esto es un cambio
 
