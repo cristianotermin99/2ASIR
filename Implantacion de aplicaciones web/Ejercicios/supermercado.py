@@ -1,0 +1,1 @@
+cantidadLapiz=int(input)
