@@ -1,0 +1,1 @@
+numeroAlumnos=int(input("Introduce "))
