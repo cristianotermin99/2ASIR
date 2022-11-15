@@ -1,8 +1,9 @@
 diaSemana=input("Que día de la semana es? ")
-tipoCliente=input("Que tipo de cliente es? (normal, vip, carlos, ines o pufo)")
-contadorProductos=0
+tipoCliente=input("Que tipo de cliente es? (normal, vip, carlos, ines o pufo): ")
 precioTotal=0
-while contadorProductos<2:
+seguir=1
+cantidadProducto=0
+while seguir==1:
     numeroProducto=0
     precioLapiz=1
     precioPC=1010
@@ -53,19 +54,20 @@ while contadorProductos<2:
     print("Introduce 4 si quieres comprar una sudadera por", precioSudadera," euros")
     print("Introduce 5 si quieres comprar una burger por ",precioHamburguesa, " euros")
     numeroProducto=int(input("Introduce el numero de producto que desees comprar: "))
-
+    cantidadProducto=int(input("Que cantidad quieres comprar de ese producto: "))   
     if numeroProducto==1:
-        precioTotal+=precioLapiz
+        precioTotal+=precioLapiz*cantidadProducto
     elif numeroProducto==2:
-        precioTotal+=precioPC
+        precioTotal+=precioPC*cantidadProducto
     elif numeroProducto==3:
-        precioTotal+=precioCoche
+        precioTotal+=precioCoche*cantidadProducto
     elif numeroProducto==4:
-        precioTotal+=precioSudadera
+        precioTotal+=precioSudadera*cantidadProducto
     elif numeroProducto==5:
-        precioTotal+=precioHamburguesa
+        precioTotal+=precioHamburguesa*cantidadProducto
 
-    contadorProductos+=1
+    
+    seguir=int(input("Quieres seguir compando?: 1. Si  2. No: "))    
 
 print("Precio de tu pedido es: ", precioTotal)
         
