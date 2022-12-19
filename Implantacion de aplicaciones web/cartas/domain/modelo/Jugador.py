@@ -9,8 +9,3 @@ class Jugador:
     puntos : int = 0
     
 
-    def nombre_completo(self):  
-        return self.nombre + " " + self.apellidos
-
-    def __str__(self):
-        return self.nombre + " " + self.apellidos + " " + str(self.puntos)
