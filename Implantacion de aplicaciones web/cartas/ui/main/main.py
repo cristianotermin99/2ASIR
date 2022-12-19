@@ -27,24 +27,24 @@ def main():
     for i in range (0,40,cantidadJugadores):
         
         # sacar cartas, una para cada jugador
+        numeroCartaAlta = 0
         for j in range (0,cantidadJugadores):
             if i+j<40:
                 jugadores[j].carta = baraja.cartas[i+j]
                 print(jugadores[j].carta, "para",jugadores[j].nombre)
+                if jugadores[j].carta.valor.value>=numeroCartaAlta:
+                    numeroCartaAlta=jugadores[j].carta.valor.value
         # un punto al jugador que la tenga mas grande
-        cartaGanadora : Carta = jugadores[0].carta
+        
         for j in range (0,cantidadJugadores):
-            if jugadores[j].carta.valor.value>=cartaGanadora.valor.value:
-                cartaGanadora=jugadores[j].carta
-        for j in range (0,cantidadJugadores):
-            if jugadores[j].carta.valor.value==cartaGanadora.valor.value:
+            if jugadores[j].carta.valor.value==numeroCartaAlta:
                 jugadores[j].puntos+=1
                 print("Punto para ", jugadores[j].nombre)
     # al final cuando se acaba la baraja se dice quien gana
     puntosMaximos=0
     for i in range(0,cantidadJugadores):
-            if jugadores[i].puntos>=puntosMaximos:
-                puntosMaximos=jugadores[i].puntos
+        if jugadores[i].puntos>=puntosMaximos:
+            puntosMaximos=jugadores[i].puntos
     
             
     print("--------------------------------")   
