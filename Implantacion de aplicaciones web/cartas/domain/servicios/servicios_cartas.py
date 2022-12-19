@@ -1,6 +1,6 @@
 from random import shuffle
 
-from domain.modelo.baraja import Baraja
+from domain.modelo.Baraja import Baraja
 from domain.modelo.Carta import Carta
 
 class ServiciosCartas:
