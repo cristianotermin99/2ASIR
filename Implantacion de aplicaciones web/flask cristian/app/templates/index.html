@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+  <title>Search</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <h1>Mazos</h1>
+  <ul>
+  {% for mazo in mazos %}
+    <li>{{ mazo.nombre }} </li>
+  {% endfor %}
+  </ul>
+</body>
+
+</html>
