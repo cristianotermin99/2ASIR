@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="ES"> 
-   
-    <head>
-        <title>Search</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
+<html lang="ES">
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
 <body>
-   
+    <h1>Pantalla para añadir cartas y personalizar mazos</h1>
+    <form action="cargarCartas" method="POST">
+        <label for="mazos">Elije uno de tus mazos: </label>
+        <select name="mazos" id="mazos">
+            {% for mazo in mazos %}
+            <option value={{mazo.nombre}}> {{ mazo.nombre}} </option>
+            {% endfor %}
+        </select>
+        <button type="submit">Ver las cartas de este mazo</button>
+    </form>
+
+    <table>
+        {% for carta in cartas %}
+            <tr>
+                <td>{{carta.nombre}}</td>
+                <td>{{carta.tipo}}</td>
+            </tr>
+        {% endfor %}
+        
+    </table>
+
+</body>
 
 </html>

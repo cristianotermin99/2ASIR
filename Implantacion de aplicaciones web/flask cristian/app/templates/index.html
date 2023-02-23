@@ -10,9 +10,25 @@
   <h1>Mazos</h1>
   <ul>
   {% for mazo in mazos %}
-    <li>{{ mazo.nombre }} </li>
+    <li>{{ mazo.nombre}} ----- {{ mazo.descripcion }} </li>
   {% endfor %}
   </ul>
+  <br>
+  <hr>
+  <div>
+    <h4>Crear mazos</h4>
+    <form action="insert" method="POST"> <!--en el action ponemos como nombre de ruta que usaremos desde routes-->
+      <input type="text" id="name" name="name" placeholder="Introduce nombre mazo">
+      <input type="text" id="descripcion" name="descripcion" placeholder="Introduce descripcion">
+      <button type="submit">Crear mazo</button>
+    </form>
+    <hr>
+    <form action="cargarMazosCartas" method="GET"> <!--en el action ponemos como nombre de ruta que usaremos desde routes-->
+      <button type="submit">Pincha aqui para personalizar los mazos</button>
+    </form>
+
+  </div>
+
 </body>
 
 </html>
